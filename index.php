@@ -7,7 +7,6 @@
 	<body>
 		<iframe src="http://aos.corp.elong.com/sag/Aos/Index" frameborder="0" width="100%" height="100%"></iframe>
 
-	
 <div id="alert_div" style="position: absolute; z-index: 10001; top: 350px; left: 40%; visibility: visible;" class="W_layer">
  <div class="bg">
   <table cellspacing="0" cellpadding="0" border="0">
@@ -18,9 +17,9 @@
        <a title="关闭 返回AOS" class="W_close" href="http://aos.corp.elong.com/sag/Aos/Index"><b>×</b></a>
        <div class="detail layer_forward" >
         <div style="height:18px;"></div>
-			<iframe src="aos.php" frameborder="0"></iframe><br/>
+			<iframe id="iframe1" src="aos.php" frameborder="0"></iframe><br/>
 			<a style="font-size:10px;color:green;font-weight:1110px">提示：当返回Json后发布成功。</a>
-			<a href="index.php">发布最新版</a>
+			<input type="button" name="Button" value="ReBuild" onclick="rebuild()">
        </div>
       </div>
     </td>
@@ -28,6 +27,11 @@
   </table>
  </div>
 </div>
-	
+
+		<script>
+			function rebuild(){
+				document.getElementById("iframe1").src="aos.php";
+			}
+		</script>
 	</body>
 </html>
