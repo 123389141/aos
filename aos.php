@@ -1,7 +1,12 @@
-<?php  
+<?php
+	//设置要发布的节点
+	$nodeId = "12489";  			//节点ID,将光标置于aos左侧节点上边，则titel显示节点ID
+	$moduleName = "/hotel/train";   //模块名,在aos右侧列表
+	$metaId = "11780";  			//模块ID,在aos右侧列表
+	
 	$ch = curl_init();  
 	$timeout = 5;  
-	$url='http://aos.corp.elong.com/apus_web/DeployInstance/GetVersions?nodeId=12489&moduleName=/hotel/train&allowThreeVersion=true&allowFourVersion=true';  
+	$url="http://aos.corp.elong.com/apus_web/DeployInstance/GetVersions?nodeId=$nodeId&moduleName=$moduleName&allowThreeVersion=true&allowFourVersion=true";  
 	curl_setopt ($ch, CURLOPT_URL,$url);  
 	curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);  
 	curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT, $timeout);  
@@ -11,10 +16,10 @@
 	$maxver=$arr[7]; 
 ?>
 
-<form id="form1" action="http://aos.corp.elong.com/apus_web/DeployInstance/Run?metaId=11780" method="post">
+<form id="form1" action="http://aos.corp.elong.com/apus_web/DeployInstance/Run?metaId=<?php echo $metaId ?>" method="post">
 	<table>
-		<tr><td>节点:</td><td><textarea style="height:30px;color:green;font-size:18px" name="nodeId">12489</textarea><br/></td></tr>
-		<tr><td>版本:</td><td><textarea style="height:30px;color:green;font-size:18px" name="version"><?php echo $maxver?></textarea><br/></td></tr>
+		<tr><td>节点:</td><td><textarea style="height:30px;color:green;font-size:18px" name="nodeId"><?php echo $nodeId ?></textarea><br/></td></tr>
+		<tr><td>版本:</td><td><textarea style="height:30px;color:green;font-size:18px" name="version"><?php echo $maxver ?></textarea><br/></td></tr>
 		<tr><td>类型:</td><td><textarea style="height:30px;color:green;font-size:18px" name="deployType">module</textarea><br/></td></tr>
 	</table>
 	<img src="images/jdt.gif">
