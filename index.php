@@ -1,37 +1,34 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>AOS发布最新版本</title>
-		<link rel="stylesheet" href="css/alert.css" >
+		<title>AOS发布最新版</title>
+		<style>#ppp{position:'absolute',z-index:'1', color:'#C30',left:20,top:20}
+		</style>
 	</head>
 	<body>
-		<iframe src="http://aos.corp.elong.com/sag/Aos/Index" frameborder="0" width="100%" height="100%"></iframe>
-
-<div id="alert_div" style="position: absolute; z-index: 10001; top: 350px; left: 40%; visibility: visible;" class="W_layer">
- <div class="bg">
-  <table cellspacing="0" cellpadding="0" border="0">
-    <tr>
-     <td style="width:280px;">
-      <div class="content">
-       <div class="title" style="cursor: move;"><span>提示信息</span></div>
-       <a title="关闭 返回AOS" class="W_close" href="http://aos.corp.elong.com/sag/Aos/Index"><b>×</b></a>
-       <div class="detail layer_forward" >
-        <div style="height:18px;"></div>
-			<iframe id="iframe1" src="aos.php" frameborder="0"></iframe><br/>
-			<a style="font-size:10px;color:green;font-weight:1110px">提示：当返回Json后发布成功。</a>
-			<input type="button" name="Button" value="ReBuild" onclick="rebuild()">
-       </div>
-      </div>
-    </td>
-   </tr>
-  </table>
- </div>
-</div>
-
-		<script>
-			function rebuild(){
-				document.getElementById("iframe1").src="aos.php";
+		<table width="80%" align="center">
+			<tr height = "80"><td width="25%"></td><td width="25%"></td><td width="25%"></td><td width="25%"></td></tr>
+			<?php
+			$dir="./";
+			$file=scandir($dir);
+			$flag=1;
+			echo "<tr height = '80'><td>";
+			foreach($file as $a){
+				if(!strstr($a,".")){
+					echo "<a href='$a'><img src='wenjianjia.jpg'><div id='ppp' align='center'>$a</div></a>";
+					echo "</td><td>";
+				}
+				else{
+					continue;
+				}
+				if($flag == 4){
+					$flag = 0;
+					echo "</td></tr><tr height = '80'><td>";
+				}
+				$flag = $flag + 1;
 			}
-		</script>
-	</body>
+				echo "</td></tr>";
+			?>
+		</table>
+	</body>	
 </html>
