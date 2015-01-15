@@ -15,7 +15,7 @@
 			echo "<tr height = '80'><td>";
 			foreach($file as $a){
 				if(!strstr($a,".")){
-					echo "<a href='$a'><img src='wenjianjia.jpg'><div id='ppp' align='center'>$a</div></a>";
+					echo "<a href='$a' style='font-size:24px;color:green;font-weight:1110px'><img src='wenjianjia.jpg'><div id='ppp' align='center'>$a</div></a>";
 					echo "</td><td>";
 				}
 				else{
