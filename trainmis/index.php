@@ -20,6 +20,7 @@
 			<iframe id="iframe1" src="aos.php" frameborder="0"></iframe><br/>
 			<a style="font-size:10px;color:green;font-weight:1110px">提示：当返回Json后发布成功。</a>
 			<input type="button" name="Button" value="ReBuild" onclick="rebuild()">
+			<a style="font-size:10px;color:green;font-weight:1110px" href ="../">返回上一页</a>
        </div>
       </div>
     </td>
