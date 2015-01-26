@@ -13,7 +13,7 @@
     <tr>
      <td style="width:280px;">
       <div class="content">
-       <div class="title" style="cursor: move;"><span>提示信息</span></div>
+       <div class="title" style="cursor: move;"><span><?php echo "★".$_SERVER['REQUEST_URI'];?></span></div>
        <a title="关闭 返回AOS" class="W_close" href="http://aos.corp.elong.com/sag/Aos/Index"><b>×</b></a>
        <div class="detail layer_forward" >
         <div style="height:18px;"></div>
