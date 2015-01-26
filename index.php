@@ -6,6 +6,11 @@
 		</style>
 	</head>
 	<body>
+		<?php
+			if($_SERVER['REQUEST_URI'] != '/aos/'){
+				echo "	<div><a href='../'>返回上级</a></div>";
+			}
+		?>
 		<table width="80%" align="center">
 			<tr height = "80"><td width="25%"></td><td width="25%"></td><td width="25%"></td><td width="25%"></td></tr>
 			<?php
