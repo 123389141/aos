@@ -1,8 +1,9 @@
 <?php
+	require_once "config.php";
 	//设置要发布的节点
-	$nodeId = "12490";  			//节点ID,将光标置于aos左侧节点上边，则titel显示节点ID
-	$moduleName = "/hotel/trainms";   //模块名,在aos右侧列表
-	$metaId = "11782";  			//模块ID,在aos右侧列表
+	$nodeId = NODEID;  			//节点ID,将光标置于aos左侧节点上边，则titel显示节点ID
+	$moduleName = MODULENAME;   //模块名,在aos右侧列表
+	$metaId = METAID;  			//模块ID,在aos右侧列表
 	
 	$ch = curl_init();  
 	$timeout = 5;  
