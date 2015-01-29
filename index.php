@@ -5,13 +5,15 @@
 		<style>#ppp{position:'absolute',z-index:'1', color:'#C30',left:20,top:20}
 		</style>
 	</head>
-	<body>
+	<body>	
+		<div style="width:80%;position: absolute; z-index: 10001;  left: 100px; visibility: visible;">
 		<?php
 			echo "★".$_SERVER['REQUEST_URI'];
 			if($_SERVER['REQUEST_URI'] != '/aos/'){
-				echo "	<div><a href='../'>返回上级</a></div>";
+				echo "	<div style='position: absolute; z-index: 10001;  left: 50%; visibility: visible;'><a href='../'>返回上级</a></div>";
 			}
 		?>
+		</div>
 		<table width="80%" align="center">
 			<tr height = "80"><td width="25%"></td><td width="25%"></td><td width="25%"></td><td width="25%"></td></tr>
 			<?php
@@ -36,5 +38,12 @@
 				echo "</td></tr>";
 			?>
 		</table>
+		<div style="position: absolute; z-index: 10001;  left: 100px; visibility: visible;">
+		<pre>
+使用说明和规范：
+1 文件夹必须以 D 开头，项目建议以节点名称命名。
+2 ...
+		</pre>
+		</div>
 	</body>	
 </html>
