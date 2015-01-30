@@ -2,8 +2,9 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>AOS发布最新版</title>
-		<style>#ppp{position:'absolute',z-index:'1', color:'#C30',left:20,top:20}
+		<style>.shubiao{cursor:pointer;}
 		</style>
+		<script type=text/javascript src="/aos/trainmis/js/jquery-1.8.3.min.js"></script>
 	</head>
 	<body>	
 		<div style="width:80%;position: absolute; z-index: 10001;  left: 100px; visibility: visible;">
@@ -23,7 +24,7 @@
 			echo "<tr height = '80'><td>";
 			foreach($file as $a){
 				if(!strstr($a,".")){
-					echo "<a href='".iconv('gb2312','utf-8',$a)."' style='font-size:24px;color:green;font-weight:1110px'><img src='wenjianjia.jpg'><div id='ppp' align='center'>".iconv('gb2312','utf-8',$a)."</div></a>";
+					echo "<div align='center'><div class='shubiao' onclick = 'yanz(this);' href='".iconv('gb2312','utf-8',$a)."'><img src='wenjianjia.jpg'></div><p style='font-size:30px;color:green;position: relative;left:0px;top:-100px;'>".iconv('gb2312','utf-8',$a)."</p></div>";
 					echo "</td><td>";
 				}
 				else{
@@ -41,10 +42,23 @@
 		<div style="position: absolute; z-index: 10001;  left: 100px; visibility: visible;">
 		<pre>
 使用说明和规范：
-1 文件夹必须以 D 开头，项目建议以节点名称命名，文件名不能包含中文。
+1 文件夹必须以 D_ 开头，项目建议以节点名称命名，文件名不能包含中文。
 2 trainmis请勿修改。
 3 ...
 		</pre>
 		</div>
 	</body>	
+<script>
+function yanz(obj){
+	var a = $(obj).attr("href");
+	var msg = "确定发布 "+a+" 下配置的所有节点吗？\n(打开页面直接发布)";
+	if(a.indexOf("D_") == -1){
+		if (confirm(msg)) {
+			location.href = a;
+		}
+	}else{
+		location.href = a;
+	}
+}
+</script>
 </html>
