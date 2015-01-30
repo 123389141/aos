@@ -41,7 +41,7 @@
 		<div style="position: absolute; z-index: 10001;  left: 100px; visibility: visible;">
 		<pre>
 使用说明和规范：
-1 文件夹必须以 D 开头，项目建议以节点名称命名。
+1 文件夹必须以 D 开头，项目建议以节点名称命名，文件名不能包含中文。
 2 trainmis请勿修改。
 3 ...
 		</pre>
