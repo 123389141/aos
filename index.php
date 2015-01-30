@@ -23,7 +23,7 @@
 			echo "<tr height = '80'><td>";
 			foreach($file as $a){
 				if(!strstr($a,".")){
-					echo "<a href='$a' style='font-size:24px;color:green;font-weight:1110px'><img src='wenjianjia.jpg'><div id='ppp' align='center'>$a</div></a>";
+					echo "<a href='".iconv('gb2312','utf-8',$a)."' style='font-size:24px;color:green;font-weight:1110px'><img src='wenjianjia.jpg'><div id='ppp' align='center'>".iconv('gb2312','utf-8',$a)."</div></a>";
 					echo "</td><td>";
 				}
 				else{
