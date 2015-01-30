@@ -24,7 +24,7 @@
 			echo "<tr height = '80'><td>";
 			foreach($file as $a){
 				if(!strstr($a,".")){
-					echo "<div align='center'><div class='shubiao' onclick = 'yanz(this);' href='".iconv('gb2312','utf-8',$a)."'><img src='wenjianjia.jpg'></div><p style='font-size:30px;color:green;position: relative;left:0px;top:-100px;'>".iconv('gb2312','utf-8',$a)."</p></div>";
+					echo "<div align='center'><div class='shubiao' onclick = 'yanz(this);' href='".iconv('gb2312','utf-8',$a)."'><img src='wenjianjia.jpg'></div><p style='font-size:24px;color:green;position: relative;left:0px;top:-100px;'>".iconv('gb2312','utf-8',$a)."</p></div>";
 					echo "</td><td>";
 				}
 				else{
